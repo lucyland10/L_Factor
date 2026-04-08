@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate L Factor</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input, button {
+            padding: 20px;
+            font-size: 25px;
+            margin: 20px;
+        }
+        #result {
+            font-size: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+            color:darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>L Factor Calculator</h2>
+
+    <input type="number" id="numberInput" placeholder="Insert a number">
+
+    <br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            let number = parseFloat(document.getElementById("numberInput").value);
+
+            if (isNaN(number)) {
+                document.getElementById("result").innerText = "Βάλε έναν έγκυρο αριθμό!";
+                return;
+            }
+
+            let result = number * 2 * 3.14;
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>
